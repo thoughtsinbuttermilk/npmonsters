@@ -1,5 +1,5 @@
 
-DROP DATABASE IF EXISTS techblog_db;
+DROP DATABASE IF EXISTS fosters_db;
 
 -- CREATE DATABASE
-CREATE DATABASE techblog_db;
+CREATE DATABASE fosters_db;
