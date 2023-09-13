@@ -13,10 +13,10 @@ router.post('/', async(req, res) =>{
     
           res.status(200).json(dbUserData);
         });
-      } catch (err) {
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
-      }
+    }
 });
 
 router.post('/login', async(req, res) => {
@@ -65,4 +65,6 @@ router.post('/login', async(req, res) => {
     } else {
       res.status(404).end();
     }
-  });
+});
+
+module.exports = router;
