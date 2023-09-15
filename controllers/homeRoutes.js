@@ -1,33 +1,41 @@
 const router = require('express').Router();
-const {User, Post} = require('../models');
+const { User, Post, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
-    try {
-        const userData = await User.findAll({
-          attributes: { exclude: ['password'] },
-          order: [['name', 'ASC']],
-        });
-        
-        const postData = await Post.findAll({
-          attributes: { exclude: ['date_created'] }
-        });
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['name', 'ASC']],
+    });
 
-        console.log(userData);
-        console.log(postData);
+    const postData = await Post.findAll({
+      attributes: { exclude: ['date_created'] },
+    });
 
-        const user = userData.map((user) => user.get({ plain: true }))
-        const post = postData.map((post) => post.get({ plain: true }))
+    const commentData = await Comment.findAll({
+      include: [
+        { model: User, attributes: { exclude: ['password', 'email'] } },
+      ],
+    });
 
-        res.render('homepage', {
-          user,
-          post,
-          // Pass the logged in flag to the template
-          // logged_in: req.session.logged_in,
-        });
+    console.log(userData);
+    console.log(postData);
+    console.log(commentData);
 
-      } catch (err) {
-        res.status(500).json(err);
-      }
+    const user = userData.map((user) => user.get({ plain: true }));
+    const post = postData.map((post) => post.get({ plain: true }));
+    const comment = commentData.map((comment) => comment.get({ plain: true }));
+
+    res.render('homepage', {
+      user,
+      post,
+      comment,
+      // Pass the logged in flag to the template
+      // logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', (req, res) => {
