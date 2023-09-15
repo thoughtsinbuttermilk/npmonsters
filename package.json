@@ -2,9 +2,7 @@
   "name": "Interactive Full-Stack Application",
   "version": "1.0.0",
   "description": "NW Bootcamp: Project 2",
-  "main": "server.js",
-  "scripts": {
-    "start": "nodemon server.js"
+  "main": "server.js"
   },
   "repository": {
     "type": "git",
