@@ -1,9 +1,10 @@
 {
+  "name": "Interactive Full-Stack Application",
+  "version": "1.0.0",
   "description": "NW Bootcamp: Project 2",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
