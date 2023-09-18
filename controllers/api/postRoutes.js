@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
             pet_breed: req.body.pet_breed,
             date_created: req.body.date_created
         });
-        
+
         req.session.save(() => {
             res.status(200).json(dbPostData)
         })

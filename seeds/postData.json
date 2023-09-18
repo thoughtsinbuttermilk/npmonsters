@@ -1,0 +1,20 @@
+[
+  {
+    "pet_type": "Dog",
+    "pet_name": "Rocket",
+    "description": "GREAT LOOKING PUP! Gets a bit anxious with dogs but is very loving and caring once she gets to know you",
+    "pet_breed": "Pit Bull"
+  },
+  {
+    "pet_name": "Flash",
+    "pet_type": "Dog",
+    "description": "VERY ENERGETIC, but the best boy once his zoomies wear off",
+    "pet_breed": "Siberian Husky"
+  },
+  {
+    "pet_name": "Comet",
+    "pet_type": "Dog",
+    "description": "Very calm, cuddly and very well trained",
+    "pet_breed": "Chow Chow"
+  }
+]
