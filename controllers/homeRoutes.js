@@ -10,11 +10,11 @@ router.get('/', async (req, res) => {
 
         const user = userData.map((user) => user.get({ plain: true }))
 
-        res.render('homepage', {
-          user,
-          // Pass the logged in flag to the template
-          logged_in: req.session.logged_in,
-        });
+        // res.render('', {
+        //   user,
+        //   // Pass the logged in flag to the template
+        //   logged_in: req.session.logged_in,
+        // });
 
       } catch (err) {
         res.status(500).json(err);
@@ -23,22 +23,20 @@ router.get('/', async (req, res) => {
 
 router.get('/posts', async (req, res) => {
   try{
-    const postData = await Post.findAll({
-      attributes: [{exclude: 'user_id'}]
+    const postsData = await Post.findAll({
+      
     });
 
-    const post = postData.map((post) => post.get({ plain: true }))
+    const posts = postsData.map((post) => post.get({ plain: true }))
 
-    console.log('line 32')
+    console.log(posts, "line 32")
 
-    res.render('post', {
-      post,
+    res.render('homepage', {
+      posts,
       logged_in: req.session.logged_in,
     });
-
-    console.log('line 37 homeroutes')
-
   } catch (err){
+    console.log(err)
     res.status(500).json(err)
   }
 })
