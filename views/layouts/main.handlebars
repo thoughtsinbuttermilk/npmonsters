@@ -22,13 +22,7 @@
 
     <header class="display-flex justify-space-between align-center p-2">
 
-      <h1>
-
-        <span role="img" aria-label="dog" keyword:dog </span>
-
-          <a href="/">Foster's INC!</a>
-
-      </h1>
+      <h1>Foster's INC!</h1>
 
       <nav>
 
@@ -36,46 +30,30 @@
 
         {{#if logged_in}}
 
-        <a href="/profile">profile</a> |
-
-        <button class="no-button" id="logout">logout</button>
-
-        {{else}}
-
-        <a href="/login">login</a>
-
-        {{/if}};
-
-
-
-
-        {{#if logged_out}}
-
-        <a href="/profile">profile</a> |
-
-        <button class="no-button" id="comment">comment</button>
+          <ul>
+            <li><a href="/users/:{id}">Profile</a></li>
+            <li><a href="/posts">See the Monsters</a></li>
+            <button id="logout" class="no-button">Logout</button>
+          </ul>
 
         {{else}}
 
-        <a href="/See the Monsters">See the Monsters</a>
+          <ul>
+
+            <li><a href="/login" id="login-link">Login</a></li>
+
+          </ul>
 
         {{/if}}
-
-
-
       </nav>
 
     </header>
 
-    <main class="container container-fluid mt-5">
+    <main class="text-center mt-5">
 
       <!-- Render the sub layout -->
-
-
-
-
       {{{ body }}}
-
+      
     </main>
 
     <footer>
