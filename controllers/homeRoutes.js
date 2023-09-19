@@ -7,16 +7,24 @@ router.get('/', async (req, res) => {
           attributes: { exclude: ['password'] },
           order: [['name', 'ASC']],
         });
-         
-        const user = userData.map((user) => user.get({ plain: true }))
+        
+        const postData = await Post.findAll({
+          attributes: { exclude: ['date_created'] }
+        });
 
         console.log(userData);
+        console.log(postData);
+
+        const user = userData.map((user) => user.get({ plain: true }))
+        const post = postData.map((post) => post.get({ plain: true }))
 
         res.render('homepage', {
           user,
+          post,
           // Pass the logged in flag to the template
-          //logged_in: req.session.logged_in,
+          // logged_in: req.session.logged_in,
         });
+
       } catch (err) {
         res.status(500).json(err);
       }
