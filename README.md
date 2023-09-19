@@ -1,138 +1,104 @@
-# 15 Project 2: Interactive Full-Stack Application
+# Fosters Pets Social Application
 
-**Team npmonsters**
+## NPMonsters' Foster Pets Social App
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+![markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 
-## Project Requirements
+![javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-* Use Node.js and Express.js to create a RESTful API.
+![node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
-* Use Handlebars.js as the template engine.
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 
-* Use MySQL and the Sequelize ORM for the database.
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-* Have both GET and POST routes for retrieving and adding new data.
+![npm](https://img.shields.io/npm/v/npm.svg?logo=npm)
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+![dotenv](https://img.shields.io/badge/dotenv-8_2._0-blue)
 
-* Have a folder structure that meets the MVC paradigm.
 
-* Include authentication (express-session and cookies).
+## Screenshot
+![website main section](/assets/resources/image.png)
 
-* Protect API keys and sensitive information with environment variables.
 
-* Be deployed using Heroku (with data).
+## Links
 
-* Have a polished UI.
+GitHub Repository: https://github.com/thoughtsinbuttermilk/npmonsters
 
-* Be responsive.
+Deployed website: https://npmonsters-fosters-f3f48ffeffd5.herokuapp.com/
 
-* Be interactive (i.e., accept and respond to user input).
 
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+## User Story
 
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+As a user who loves animals
 
-## Presentation Requirements
+I want to connect people and families who want to foster pets
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+So that they can share their experiences and work together to find pets homes
 
-* Elevator pitch: a one minute description of your application
+I want the app to showcase pets (dogs and cats)
 
-* Concept: What is your user story? What was your motivation for development?
+So that potential adoptive parents can find a match and take them in
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+I want likes and comments on posts
 
-* Demo: Show your stuff!
+So that these pets gain visibility and have a better chance of getting adopted
 
-* Directions for Future Development
 
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
+## Technology used
 
-## Grading Requirements
+**_The application was built using:_**
 
-> **Note**: If a project submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+[node.js, v20.5.0](https://nodejs.org/en), an asynchronous, event-driven JavaScript runtime designed to build scalable network applications
 
-This project is graded based on the following criteria:
+[express.js](https://expressjs.com/), a fast, _un-opinionated_, minimalist web framework for node.js
 
-### Technical Acceptance Criteria: 25%
+[MySql, v2.1.0](https://dev.mysql.com/doc/refman/8.1/en/), the world's _most popular_ open source database
 
-* Satisfies the following code requirements:
+[sequelize](https://sequelize.org/), sequelize is a modern TypeScript and Node.js ORM MySQL and other databases
 
-  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
+[dotenv](https://www.npmjs.com/package/dotenv) A module that loads environment variables into process variables
 
-  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
+[insomnia](https://insomnia.rest/) a GUI that provides an easy to use interface that supports designing, debugging and testiing APIs
 
-  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
+[Bootstrap] (https://getbootstrap.com/)
 
-  * Application includes user authentication (express-session and cookies).
+[Heroku] (https://dashboard.heroku.com/)
 
-  * Application uses at least one new library, package, or technology not covered in class.
+"bcrypt": "^5.0.0",
 
-### Concept 10%
+"connect-session-sequelize": "^7.0.4",
 
-* Application should be a unique and novel idea.
+"dotenv": "^8.6.0",
 
-* Your group should clearly and concisely articulate your project idea.
+"express": "^4.17.1",
 
-### Deployment: 20%
+"express-handlebars": "^5.2.0",
 
-* Application deployed at live URL on Heroku and loads with no errors.
+"express-session": "^1.17.1",
 
-* Application GitHub URL submitted.
+"mysql2": "^2.2.5",
 
-### Repository Quality: 10%
+"sequelize": "^6.3.5"
 
-* Repository has a unique name.
 
-* Repository follows best practices for file structure and naming conventions.
+## How to use
+To use our application, the user can visit our website directly. Once on the site, the user then can either browse as a guest or signup to interact with site even further. If the user signs up for an account or is already logged in they will be allowed to post pictures and texts. The user may also be to make comments and interact with other users. 
 
-* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
+## License
+ISC license. See package.json
 
-* Repository contains multiple descriptive commit messages.
+## Contact Info
+our GitHub accounts:
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+Marko Andreev: https://github.com/MarkoAndreev 
 
-### Application Quality: 15%
+Samantha Bailey: https://github.com/thoughtsinbuttermilk
 
-* Application user experience is intuitive and easy to navigate.
+Johnnae Brown: https://github.com/Johnnae
 
-* Application user interface style is clean and polished.
+Justin Makilan: https://github.com/JustInFamous
 
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Full-Stack Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
