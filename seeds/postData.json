@@ -3,18 +3,21 @@
     "pet_type": "Dog",
     "pet_name": "Rocket",
     "description": "GREAT LOOKING PUP! Gets a bit anxious with dogs but is very loving and caring once she gets to know you",
-    "pet_breed": "Pit Bull"
+    "pet_breed": "Pit Bull",
+    "file_name" : "02-rocket.png"
   },
   {
     "pet_name": "Flash",
     "pet_type": "Dog",
     "description": "VERY ENERGETIC, but the best boy once his zoomies wear off",
-    "pet_breed": "Siberian Husky"
+    "pet_breed": "Siberian Husky",
+    "file_name": "01-flash.png"
   },
   {
     "pet_name": "Comet",
     "pet_type": "Dog",
     "description": "Very calm, cuddly and very well trained",
-    "pet_breed": "Chow Chow"
+    "pet_breed": "Chow Chow",
+    "file_name": "03-comet.jpg"
   }
 ]

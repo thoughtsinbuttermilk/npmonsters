@@ -11,6 +11,8 @@ router.post('/', async (req, res) => {
             date_created: req.body.date_created
         });
 
+        console.log('line 14 post routes')
+
         req.session.save(() => {
             res.status(200).json(dbPostData)
         })

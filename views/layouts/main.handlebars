@@ -1,79 +1,72 @@
-<!DOCTYPE html>
+<html lang='en'>
 
-<html lang="en">
+  <head>
 
+    <meta charset='UTF-8' />
 
-<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
-  <meta charset="UTF-8">
+    <title>Foster's INC!</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/css/style.css' />
 
-  <title>Foster's INC!</title>
+  </head>
 
-  <link rel="stylesheet" href="/css/style.css">
+  <body>
 
-</head>
+    <div class='flex-column justify-space-around'>
 
+      <header class='display-flex justify-space-between align-center p-2'>
 
-<body>
+        <h1>Foster's INC!</h1>
 
-  <div class="flex-column justify-space-around">
+        <nav>
 
-    <header class="display-flex justify-space-between align-center p-2">
+          <!-- Conditionally render login or logout links -->
 
-      <h1>Foster's INC!</h1>
+          {{#if logged_in}}
 
-      <nav>
+            <ul>
+              <li><a href='/users/:{id}'>Profile</a></li>
+              <li><a href='/posts'>See the Monsters!</a></li>
+              <button id='logout' class='no-button'>Logout</button>
+            </ul>
 
-        <!-- Conditionally render login or logout links -->
+          {{else}}
 
-        {{#if logged_in}}
+            <ul>
 
-          <ul>
-            <li><a href="/users/:{id}">Profile</a></li>
-            <li><a href="/posts">See the Monsters</a></li>
-            <button id="logout" class="no-button">Logout</button>
-          </ul>
+              <li><a href='/login' id='login-link'>Login</a></li>
 
-        {{else}}
+            </ul>
 
-          <ul>
+          {{/if}}
+        </nav>
 
-            <li><a href="/login" id="login-link">Login</a></li>
+      </header>
 
-          </ul>
+      <main class='text-center mt-5'>
 
-        {{/if}}
-      </nav>
+        <!-- Render the sub layout -->
+        {{{body}}}
 
-    </header>
+      </main>
 
-    <main class="text-center mt-5">
+      <footer>
 
-      <!-- Render the sub layout -->
-      {{{ body }}}
-      
-    </main>
+      </footer>
 
-    <footer>
+    </div>
 
+    <!-- Render script for logged in users only -->
 
+    {{#if logged_in}}
 
-    </footer>
+      <script src='/js/logout.js'></script>
 
-  </div>
+    {{/if}}
 
-
-  <!-- Render script for logged in users only -->
-
-  {{#if logged_in}}
-
-  <script src="/js/logout.js"></script>
-
-  {{/if}}
-
-</body>
-
+    console.log('mainhandlebars')
+  </body>
 
 </html>

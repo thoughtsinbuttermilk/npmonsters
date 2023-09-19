@@ -7,17 +7,11 @@ router.get('/', async (req, res) => {
           attributes: { exclude: ['password'] },
           order: [['username', 'ASC']],
         });
-        
-        const postData = await Post.findAll({
-          attributes: { exclude: ['date_created'] }
-        });
 
         const user = userData.map((user) => user.get({ plain: true }))
-        const post = postData.map((post) => post.get({ plain: true }))
 
         res.render('homepage', {
           user,
-          post,
           // Pass the logged in flag to the template
           logged_in: req.session.logged_in,
         });
@@ -26,6 +20,28 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
       }
 });
+
+router.get('/posts', async (req, res) => {
+  try{
+    const postData = await Post.findAll({
+      attributes: [{exclude: 'user_id'}]
+    });
+
+    const post = postData.map((post) => post.get({ plain: true }))
+
+    console.log('line 32')
+
+    res.render('post', {
+      post,
+      logged_in: req.session.logged_in,
+    });
+
+    console.log('line 37 homeroutes')
+
+  } catch (err){
+    res.status(500).json(err)
+  }
+})
 
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
