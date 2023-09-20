@@ -109,6 +109,10 @@
     display: inline-flex;
   }
 
+  .post-card{
+    padding-bottom: 75px;
+  }
+
   .post-card h3{
     color: var(--light);
     font-size: 32px;
@@ -126,16 +130,18 @@
 
   .post-card img{
     width: 100%;
+    background-color: var(--primary);
   }
 
   .post-card .post-details{
     color: var(--light);
+    padding-top: 5px;
   }
 
   .description{
     font-size: 24px;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 5px;
   }
 
   .availability{
