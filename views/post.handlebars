@@ -1,0 +1,8 @@
+{{#if logged_in}}
+<section class="flex-row justify-center">
+    {{#each posts as |post|}}
+    {{> post-details}}
+
+    {{/each}}
+  </section>
+{{/if}}  
