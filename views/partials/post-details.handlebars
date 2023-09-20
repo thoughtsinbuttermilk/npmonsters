@@ -1,19 +1,19 @@
 
 <section class="post-card">
-    post details
-
     <header>
         <h3>{{pet_name}}</h3>
 
         <h4>{{pet_breed}}</h4>
     </header>   
 
-    <img src="/images/{{file_name}}" alt="{{description}}">
+    <div class="image-container">
+        <img src="/images/{{file_name}}" alt="{{description}}">
+    </div>
 
     <div class="post-details">
 
-        <p>{{description}}</p>
-        <p>{{pet_name}} has been available from: {{format_date date_created}}</p>
+        <p class="description">{{description}}</p>
+        <p class="availability">{{pet_name}} has been available from: {{format_date date_created}}</p>
 
     </div>
 </section>

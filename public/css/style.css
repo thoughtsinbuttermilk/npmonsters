@@ -109,8 +109,37 @@
     display: inline-flex;
   }
 
-  #info-container button{
-    
+  .post-card h3{
+    color: var(--light);
+    font-size: 32px;
   }
 
-  
+  .post-card h4{
+    color: var(--light);
+    font-size: 24px;
+  }
+
+  .post-details{
+    background-color: var(--primary);
+    padding-top: 0px;
+  }
+
+  .post-card img{
+    width: 100%;
+  }
+
+  .post-card .post-details{
+    color: var(--light);
+  }
+
+  .description{
+    font-size: 24px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .availability{
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
